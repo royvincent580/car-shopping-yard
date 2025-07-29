@@ -26,3 +26,23 @@
   font-size: 1.2rem;
   color: #7f8c8d;
 }
+
+.no-cars {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .cars-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .cars-container {
+    grid-template-columns: 1fr;
+  }
+}
