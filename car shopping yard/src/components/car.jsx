@@ -27,3 +27,14 @@ function Cars() {
       car.model.toLowerCase().includes(term) || 
       car.year.toString().includes(term)
     );
+
+  setFilteredCars(filtered);
+  };
+  
+  const handleViewDetails = (car) => {
+    setSelectedCar(car);
+  };
+  
+  const handleCloseDetails = () => {
+    setSelectedCar(null);
+  };
