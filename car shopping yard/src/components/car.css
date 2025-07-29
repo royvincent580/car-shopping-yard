@@ -4,3 +4,11 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.cars-header {
+  margin-bottom: 2rem;
+}
+
+.cars-header h1 {
+  margin-bottom: 1rem;
+}
