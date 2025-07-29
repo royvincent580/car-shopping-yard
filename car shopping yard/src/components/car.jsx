@@ -38,3 +38,14 @@ function Cars() {
   const handleCloseDetails = () => {
     setSelectedCar(null);
   };
+
+  if (loading) {
+    return <div className="loading">Loading cars...</div>;
+  }
+  
+  return (
+    <div className="cars-page">
+      <div className="cars-header">
+        <h1>Available Cars</h1>
+        <SearchBar onSearch={handleSearch} />
+      </div>
