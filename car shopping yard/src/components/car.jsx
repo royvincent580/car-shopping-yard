@@ -10,3 +10,12 @@ function Cars() {
   const [selectedCar, setSelectedCar] = useState(null);
   const [loading, setLoading] = useState(true);
   
+  useEffect(() => {
+    fetch('http://localhost:3000/cars')
+      .then(res => res.json())
+      .then(data => {
+        setCars(data);
+        setFilteredCars(data);
+        setLoading(false);
+      });
+  }, []);
